@@ -1,5 +1,7 @@
 import tweepy
 
+file_name = 'last_seen_id.txt'
+
 
 def authenticate(api_key, api_key_secret, access_tocken, access_tocken_secret):
     auth = tweepy.OAuthHandler(api_key, api_key_secret)
@@ -44,23 +46,14 @@ def get_mentioned_thread(api, last_seen_id_thread):
 
 
 def get_last_seen_id():
+    f_read = open(file_name, 'r')
+    last_seen_id = int(f_read.read().strip())
+    f_read.close()
+    return last_seen_id
+
+
+def set_last_seen_id(last_seen_id, ):
+    f_write = open(file_name, 'w')
+    f_write.write(str(last_seen_id))
+    f_write.close()
     return
-
-
-def set_last_seen_id(last_seen_id):
-    return
-
-
-def update_db(thread_text, user):
-    return
-
-
-auth_api = authenticate()
-while True:
-    last_seen_id = get_last_seen_id()
-    last_seen_id, status_id, author_id, user = get_mentioned_thread(auth_api, last_seen_id)
-    if last_seen_id == 0 and status_id == 0 and author_id == 0 and user == 0:
-        continue
-    set_last_seen_id(last_seen_id)
-    thread = get_thread_text(auth_api, author_id, status_id)
-    update_db(thread,user)
