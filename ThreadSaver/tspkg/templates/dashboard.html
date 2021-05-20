@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Dashboard</h1>
+    <div class="box-1">
+        <h3>The Tweet saved by the user {{ value.user_id }}</h3>
+        <p>{{ value.tweet }}</p>
+         <a href="{{ url_for('download') }}">Download</a>
+    </div>
+{% endblock content %}
