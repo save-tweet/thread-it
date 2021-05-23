@@ -1,9 +1,11 @@
-from Bot.bot import *
+from os import environ
+
+from sqlalchemy import create_engine, Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine, Column, String, Integer
-import os
-from os import environ
+
+from Bot.bot import *
+
 Base = declarative_base()
 
 
