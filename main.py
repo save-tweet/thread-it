@@ -17,5 +17,7 @@ if __name__ == '__main__':
             thread = get_tweet_text(auth_api,status_id)
         else:
             thread = get_thread_text(auth_api, author_id, status_id)
-        auth_api.send_direct_message(user,thread)
-        update_db(thread, user)
+        try:
+            auth_api.send_direct_message(user,thread)
+        finally:
+            update_db(thread, user)

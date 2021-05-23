@@ -1,3 +1,5 @@
+import time
+
 import tweepy
 
 file_name = 'last_seen_id.txt'
@@ -48,6 +50,7 @@ def get_tweet_text(api, tweet_id):
 
 
 def get_mentioned_thread(api, last_seen_id_thread):
+    time.sleep(15)
     mentions = api.mentions_timeline(last_seen_id_thread, tweet_mode='extended')
     if not mentions:
         return 0, 0, 0, 0
