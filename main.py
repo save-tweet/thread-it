@@ -2,9 +2,17 @@ from Bot.bot import *
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine, Column, String, Integer
-
+import os
+from os import environ
 Base = declarative_base()
 
+
+Consumer_key_bot = environ['Consumer_key_bot']
+Consumer_key_Secret_bot = environ['Consumer_key_Secret_bot']
+Api_key_bot = environ['Api_key_bot']
+Api_key_Secret_bot = environ['Api_key_Secret_bot']
+Consumer_key_web = environ['Consumer_key_web']
+Consumer_key_secret_web = environ['Consumer_key_secret_web']
 
 class User(Base):
     __tablename__ = 'user'
@@ -28,7 +36,7 @@ def update_db(thread_text, user):
 
 
 if __name__ == '__main__':
-    auth_api = authenticate()
+    auth_api = authenticate(Consumer_key_bot,Consumer_key_Secret_bot,Api_key_bot,Api_key_Secret_bot)
     while True:
         last_seen_id = get_last_seen_id()
         last_seen_id, status_id, author_id, user,is_it_tweet = get_mentioned_thread(auth_api, last_seen_id)
