@@ -2,7 +2,7 @@ import time
 
 import tweepy
 
-file_name = 'last_seen_id.txt'
+file_name = 'Bot/last_seen_id.txt'
 
 
 def authenticate(api_key, api_key_secret, access_tocken, access_tocken_secret):
