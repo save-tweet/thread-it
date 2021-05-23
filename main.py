@@ -1,8 +1,30 @@
 from Bot.bot import *
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine, Column, String, Integer
+
+Base = declarative_base()
+
+
+class User(Base):
+    __tablename__ = 'user'
+    id = Column('id', Integer, primary_key=True)
+    user = Column('user_id', String)
+    tweet = Column('tweet', String)
+
+
+engine = create_engine('sqlite:///site.db', echo=True)
+Base.metadata.create_all(bind=engine)
+Session = sessionmaker(bind=engine)
+session = Session()
 
 
 def update_db(thread_text, user):
-    return
+    new_user = User()
+    new_user.user = user
+    new_user.tweet = thread_text
+    session.add(new_user)
+    session.commit()
 
 
 if __name__ == '__main__':
