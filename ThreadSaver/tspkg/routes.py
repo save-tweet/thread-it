@@ -16,9 +16,6 @@ def about():
     return render_template('about.html', title='About')
 
 
-#user = User.query.filter_by(user_id='user').first()  # dummy need to be cleared
-
-
 @app.route("/dashboard")
 def dashboard():
     if not twitter.authorized:

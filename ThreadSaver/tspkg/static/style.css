@@ -14,7 +14,7 @@ body{
 }
 
 #main-header{
-	background-color:#00ced1;
+	background-color:#3bc8fe;
 	color:#fff;
 }
 
@@ -65,6 +65,13 @@ a:active{
     padding:3px
 }
 
+.download-all{
+    color:black;
+    border:1px grey solid;
+    background-color:#cbd3ee;
+    padding:3px
+}
+
 #showcase{
 	background-image:url('sample02.jpg');
 	background-position:center right;
@@ -89,12 +96,31 @@ a:active{
 	box-sizing: border-box;
 }
 
+#main a{
+    color:#3bc8fe;
+}
+
 #main-footer{
 	background: #333;
 	color:#fff;
 	text-align: center;
 	padding:10px;
 	margin-top:70px;
+}
+
+#main-footer a{
+    color:#3bc8fe;
+}
+
+#about{
+	width:70%;
+	padding:10 10px;
+	font-size:25px;
+	margin-top:10px;
+}
+
+#about a{
+    color:#3bc8fe;
 }
 
 @media(max-width:600px){

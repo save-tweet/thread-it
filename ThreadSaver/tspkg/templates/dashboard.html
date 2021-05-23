@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>Dashboard</h1>
+    <h2>Dashboard</h2>
     <h3>The Tweet saved by the user {{ value }}</h3>
     {% for tweet in tweets %}
     <div class="box-1">
@@ -8,5 +8,5 @@
          <a href="{{ url_for('download',text=tweet.tweet) }}">Download</a>
     </div>
     {% endfor %}
-    <a href="{{ url_for('download_all') }}">Download All</a>
+    <a class="download-all" href="{{ url_for('download_all') }}">Download All</a>
 {% endblock content %}

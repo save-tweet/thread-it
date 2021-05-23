@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
 <!--	<link rel="stylesheet" type="text/css" href="static/main.css">-->
-    <h2>Home Page</h2>
+    <h2>Home</h2>
 <!--    <p>This is a simple web app for a twitter bot which help to save threads by mentioning in twitter.</p>-->
 	<section id="showcase">
 		<div class="container">
@@ -13,10 +13,14 @@
 			<h1>Welcome</h1>
 			<p>This is a simple web app for a twitter bot which help to save threads and tweets by mentioning in twitter.
 			The mentioned thread will be available in dashboard.</p>
-			<p>To see the saved threads, <a href="#">Login</a>  </p>
+			<p>You can see your saved tweets in the <a href="{{ url_for('dashboard') }}">Dashboard</a>  </p>
 		</section>
 	</div>
 	<footer id="main-footer">
-		<p>MIT License</p>
+		<p>
+			Follow @
+			<a class="twitter-button" href="https://twitter.com/savethread" target="_blank">twitter</a> and
+			<a class="github-button" href="https://github.com/save-tweet/thread-it" target="_blank">github</a>
+		</p>
 	</footer>
 {% endblock content %}
