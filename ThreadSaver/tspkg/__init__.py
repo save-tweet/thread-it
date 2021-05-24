@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dude280ba245'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../../site.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://dncayxqe:7apaHxS2RAN6NliSH3v66RKmNKnGu4av@batyr.db.elephantsql.com/dncayxqe'
 
 Consumer_key_web = environ['Consumer_key_web']
 Consumer_key_secret_web = environ['Consumer_key_secret_web']
