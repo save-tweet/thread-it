@@ -1,6 +1,6 @@
 from flask import render_template, url_for, redirect, send_file
-from tspkg import app
-from tspkg.models import User
+from ThreadSaver.tspkg import app
+from ThreadSaver.tspkg.models import User
 from flask_login import logout_user, login_required
 from flask_dance.contrib.twitter import twitter
 
