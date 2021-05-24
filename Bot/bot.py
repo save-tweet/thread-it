@@ -53,7 +53,7 @@ def get_mentioned_thread(api, last_seen_id_thread):
     time.sleep(15)
     mentions = api.mentions_timeline(last_seen_id_thread, tweet_mode='extended')
     if not mentions:
-        return 0, 0, 0, 0
+        return 0, 0, 0, 0,0
     mention = mentions[-1]
     is_it_tweet = is_tweet(mention)
     last_seen_id_thread = mention.id
