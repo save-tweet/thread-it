@@ -15,4 +15,4 @@ app.register_blueprint(twitter_bp, url_prefix="/login")
 
 db = SQLAlchemy(app)
 
-from tspkg import routes
+from ThreadSaver.tspkg.routes import *

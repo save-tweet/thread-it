@@ -1,4 +1,4 @@
-from tspkg import db
+from ThreadSaver.tspkg import db
 
 
 class User(db.Model):
