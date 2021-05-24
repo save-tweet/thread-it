@@ -21,7 +21,7 @@ class User(Base):
     tweet = Column('tweet', String)
 
 
-engine = create_engine('sqlite:///site.db', echo=True)
+engine = create_engine('postgresql+psycopg2://dncayxqe:7apaHxS2RAN6NliSH3v66RKmNKnGu4av@batyr.db.elephantsql.com/dncayxqe', echo=True)
 Base.metadata.create_all(bind=engine)
 Session = sessionmaker(bind=engine)
 session = Session()
