@@ -13,8 +13,6 @@ Consumer_key_bot = environ['Consumer_key_bot']
 Consumer_key_Secret_bot = environ['Consumer_key_Secret_bot']
 Api_key_bot = environ['Api_key_bot']
 Api_key_Secret_bot = environ['Api_key_Secret_bot']
-Consumer_key_web = environ['Consumer_key_web']
-Consumer_key_secret_web = environ['Consumer_key_secret_web']
 
 class User(Base):
     __tablename__ = 'user'
