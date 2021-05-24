@@ -1,2 +1,2 @@
-web:gunicorn ThreadSaver/wsgi:app
+web:gunicorn ThreadSaver.wsgi:app
 worker: python main.py
