@@ -34,6 +34,9 @@ BFH/recbY0A1OBTpNxJ5c/2021
 11. psycopg2-binary==2.8.6
 ## How to configure
 1. Clone the GitHub repository.
+  ``` 
+  git clone https://github.com/save-tweet/thread-it.git
+  ```
 2. Create a virtual environment and activate it using:
   ``` 
   virtualenv venv
@@ -43,9 +46,12 @@ BFH/recbY0A1OBTpNxJ5c/2021
   ``` 
   pip install <library>
   ```
-4. Now, run wsgi.py for webpage and main.py for bot.
 ## How to Run
 Create 2 terminal instances. On first one run:
-```python main.py```
+```
+python main.py
+```
 And on second instance run
-```python 
+```
+python wsgi.py
+```
