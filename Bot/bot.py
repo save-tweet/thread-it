@@ -14,7 +14,7 @@ def authenticate(api_key, api_key_secret, access_tocken, access_tocken_secret):
 def get_thread_text(api, author_id, status_id):
     thread = ''
     found = 0
-    for status in tweepy.Cursor(api.user_timeline, id=author_id, tweet_mode='extended').items(500):
+    for status in tweepy.Cursor(api.user_timeline, id=author_id, tweet_mode='extended').items(3000):
         if status.in_reply_to_user_id != author_id and status.in_reply_to_status_id is not None:
             continue
         elif status_id == status.id:
