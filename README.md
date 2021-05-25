@@ -21,17 +21,17 @@ BFH/recbY0A1OBTpNxJ5c/2021
 2. The website has a twitter login through which we get an userid of Twitter user.
 3. Then the website searches for the userid in database and displays the result which can be downloaded as a thread.
 ## Libraries used
-1. click==7.1.2
-2. Flask==2.0.1
-3. Flask-Dance==5.0.0
-4. Flask-Login==0.5.0
-5. Flask-SQLAlchemy==2.5.1
-6. gunicorn==20.1.0
-7. itsdangerous==2.0.1
-8. Jinja2==3.0.1
-9. SQLAlchemy==1.4.15
-10. tweepy==3.10.0
-11. psycopg2-binary==2.8.6
+1. click 7.1.2
+2. Flask 2.0.1
+3. Flask-Dance 5.0.0
+4. Flask-Login 0.5.0
+5. Flask-SQLAlchemy 2.5.1
+6. gunicorn 20.1.0
+7. itsdangerous 2.0.1
+8. Jinja2 3.0.1
+9. SQLAlchemy 1.4.15
+10. tweepy 3.10.0
+11. psycopg2-binary 2.8.6
 ## How to configure
 1. Clone the GitHub repository.
   ``` 
@@ -44,14 +44,15 @@ BFH/recbY0A1OBTpNxJ5c/2021
   ```
 3. Install the libraries mentioned in requirements using:
   ``` 
-  pip install <library>
+  pip install -r requirements.txt
   ```
 ## How to Run
-Create 2 terminal instances. On first one run:
+Create 2 terminal instances. 
+On first one run:
 ```
 python main.py
 ```
-And on second instance run
+And on second instance run:
 ```
 python wsgi.py
 ```
