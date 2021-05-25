@@ -10,7 +10,7 @@ BFH/recbY0A1OBTpNxJ5c/2021
 ## Link to product walkthrough
 [link to video]
 ## How it Works ?
-### Bot
+### [Bot](https://twitter.com/savethread)
 1. This project uses tweepy which is a Python library for accessing the Twitter API.
 2. We use tweepy to get the mentions for our bot.
 3. And using that mention, the thread/tweet is saved to a string along with the user who mentioned the bot.
