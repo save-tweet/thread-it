@@ -15,7 +15,7 @@ BFH/recbY0A1OBTpNxJ5c/2021
 2. We use tweepy to get the mentions for our bot.
 3. And using that mention, the thread/tweet is saved to a string along with the user who mentioned the bot.
 4. The saved variables are pushed to an SQL database using sqlalchemy library.
-5. The bot also sends a DM to the user with the thread
+5. The bot also sends a DM to the user with the thread(You have to follow the bot for DM to work)
 ### [Website](https://savethredit.herokuapp.com/)
 1. The website uses flask.
 2. The website has a twitter login through which we get an userid of Twitter user.
