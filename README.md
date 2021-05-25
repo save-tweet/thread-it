@@ -8,7 +8,7 @@ A simple Twitter bot and a webpage which allows users to save any desired tweet 
 ## Team Id
 BFH/recbY0A1OBTpNxJ5c/2021
 ## Link to product walkthrough
-[link to video]
+[link to video](https://www.loom.com/share/2740959bdf1b49f4a765955c6176454c)
 ## How it Works ?
 ### [Bot](https://twitter.com/savethread)
 1. This project uses tweepy which is a Python library for accessing the Twitter API.
