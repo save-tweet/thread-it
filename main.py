@@ -14,11 +14,18 @@ Consumer_key_Secret_bot = environ['Consumer_key_Secret_bot']
 Api_key_bot = environ['Api_key_bot']
 Api_key_Secret_bot = environ['Api_key_Secret_bot']
 
+
 class User(Base):
     __tablename__ = 'user'
     id = Column('id', Integer, primary_key=True)
     user = Column('user_id', String)
     tweet = Column('tweet', String)
+    
+    
+class Last(Base):
+    __tablename__ = 'last'
+    id = Column('id', Integer, primary_key=True)
+    lastid = Column('lastid', BigInteger) 
 
 
 engine = create_engine('postgresql+psycopg2://dncayxqe:7apaHxS2RAN6NliSH3v66RKmNKnGu4av@batyr.db.elephantsql.com/dncayxqe', echo=True)
@@ -33,6 +40,18 @@ def update_db(thread_text, user):
     new_user.tweet = thread_text
     session.add(new_user)
     session.commit()
+    
+    
+def get_last_seen_id():
+    last_seen = session.query(Last).first()
+    return last_seen.lastid
+
+
+def set_last_seen_id(last_seen_id):
+    last_seen = session.query(Last).first()
+    last_seen.lastid = last_seen_id
+    session.commit()
+    return
 
 
 if __name__ == '__main__':
