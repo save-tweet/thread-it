@@ -61,17 +61,3 @@ def get_mentioned_thread(api, last_seen_id_thread):
     author_id_thread = mention.in_reply_to_user_id
     user_id_thread = mention.user.id
     return last_seen_id_thread, status_id_thread, author_id_thread, user_id_thread, is_it_tweet
-
-
-def get_last_seen_id():
-    f_read = open(file_name, 'r')
-    last_seen_id = int(f_read.read().strip())
-    f_read.close()
-    return last_seen_id
-
-
-def set_last_seen_id(last_seen_id, ):
-    f_write = open(file_name, 'w')
-    f_write.write(str(last_seen_id))
-    f_write.close()
-    return
