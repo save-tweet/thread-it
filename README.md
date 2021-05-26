@@ -1,6 +1,6 @@
 ![BFH Banner](https://trello-attachments.s3.amazonaws.com/542e9c6316504d5797afbfb9/542e9c6316504d5797afbfc1/39dee8d993841943b5723510ce663233/Frame_19.png)
 # thread-it
-A simple Twitter bot and a webpage which allows users to save any desired tweet or thread for later use just by mentioning this bot. The saved tweet/thread can be viewed in the webpage after loggin in with twitter. Users can also download tweets from webpage as a text file. They will also receive a copy of direct message from the bot.
+A simple Twitter bot and a webpage which allows users to save any desired tweet or thread for later use just by mentioning this bot. The saved tweet/thread can be viewed in the webpage after loggin in with twitter. Users can also download tweets from webpage as a text file. They will also receive a copy of direct message from the bot .
 ## Team members
 1. [Alwin Joseph](https://github.com/alwin48)
 2. [Muhammed Rizal K E](https://github.com/MUHAMMEDRIZALKE)
