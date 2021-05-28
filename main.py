@@ -68,6 +68,7 @@ if __name__ == '__main__':
             thread = get_thread_text(auth_api, author_id, status_id)
         try:
             auth_api.send_direct_message(user,thread)
-            update_db(thread, user)
         except Exception as e:
             print(e)
+        finally:
+            update_db(thread, user)
